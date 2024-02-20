@@ -4,7 +4,7 @@
     <title>Quiz 1</title>
     <meta name="title" content="Quiz 1" />
 
-    <script src="js/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
+    <!-- <script src="js/jquery-1.12.4.min.js" crossorigin="anonymous"></script> -->
     
     <meta property="og:title" content="Quiz 1" />
     <meta property="og:description" content="" />
@@ -105,7 +105,7 @@
             <div class="row buttonContainer">
               <div
                 class="col-6"
-                onclick="$('.step1').fadeOut(500); $('.step5').delay(500).fadeIn(500); $('.progress-bar').css('width', '60%').attr('aria-valuenow', '60'); $('.progress-bar').html('60% complete');"
+                onclick="hideAndShow('.step1', '.step5'); updateProgressBar(60, '60% complete');"
               >
                 <div class="image-border">
                   <div style="margin-top: 30px; margin-bottom: 30px">
@@ -120,7 +120,7 @@
               </div>
               <div
                 class="col-6"
-                onclick="$('.step1').fadeOut(500); $('.step5').delay(500).fadeIn(500); $('.progress-bar').css('width', '60%').attr('aria-valuenow', '60'); $('.progress-bar').html('60% complete');"
+                onclick="hideAndShow('.step1', '.step5'); updateProgressBar(60, '60% complete');"
               >
                 <div class="image-border">
                   <div style="margin-top: 30px; margin-bottom: 30px">
@@ -143,7 +143,7 @@
             <div class="row buttonContainer">
               <div
                 class="col-6"
-                onclick="$('.step5').fadeOut(500); $('.step6').delay(500).fadeIn(500); $('.progress-bar').css('width', '80%').attr('aria-valuenow', '80').html('80% complete');"
+                onclick="hideAndShow('.step5', '.step6'); updateProgressBar(80, '80% complete');"
               >
                 <div class="image-border">
                   <div style="margin-top: 30px; margin-bottom: 30px">
@@ -157,7 +157,7 @@
               </div>
               <div
                 class="col-6"
-                onclick="$('.step5').fadeOut(500); $('.step6').delay(500).fadeIn(500); $('.progress-bar').css('width', '80%').attr('aria-valuenow', '80').html('80% complete');"
+                onclick="hideAndShow('.step5', '.step6'); updateProgressBar(80, '80% complete');"
               >
                 <div class="image-border">
                   <div style="margin-top: 30px; margin-bottom: 30px">
@@ -187,9 +187,7 @@
               </h3>
               <div
                 class="col-6"
-                onclick="
-              helloworld();
-              "
+                onclick="helloworld();"
               >
                 <div class="image-border">
                   <div style="margin-top: 30px; margin-bottom: 30px">
@@ -217,7 +215,6 @@
               </div>
             </div>
           </div>
-          <script></script>
 
           <div class="quiz-Box step0" style="">
             <h1 id="main-title" style="font-family: Arial; font-weight: bold">
@@ -241,7 +238,7 @@
                   <p style="margin-top: 20px">
                     <a
                       class="cta_btn"
-                   
+                      onclick="startPoll()"
                       >START THE POLL</a
                     >
                   </p>
@@ -296,7 +293,7 @@
                     <p style="margin-top: 20px">
                       <a
                         class="cta_btn"
-                      
+                        onclick="startPoll()"
                         >START THE POLL</a
                       >
                     </p>
@@ -307,18 +304,21 @@
             </div>
 
             <script type="text/javascript">
-              $("#q1").click(function () {
-                $(".step0").fadeOut(500);
-                $(".step1").delay(500).fadeIn(500);
-                /*
-                $("#q2").delay(500).fadeIn(500);*/
-              });
-              $("#q65").click(function () {
-                $(".step0").fadeOut(500);
-                $(".step1").delay(500).fadeIn(500);
-                /*
-                $("#q2").delay(500).fadeIn(500);*/
-              });
+              function hideAndShow(hideSelector, showSelector) {
+                document.querySelector(hideSelector).style.display = "none";
+                document.querySelector(showSelector).style.display = "block";
+              }
+
+              function updateProgressBar(val, text) {
+                var progressBar = document.querySelector(".progress-bar");
+                progressBar.style.width = val + "%";
+                progressBar.setAttribute("aria-valuenow", val);
+                progressBar.innerHTML = text;
+              }
+
+              function startPoll() {
+                hideAndShow('.step0', '.step1');
+              }
 
               var countingItem = document.getElementById("countingItem");
               var seconds = 59;
@@ -382,4 +382,5 @@
       </div>
     </div>
   </body>
+
 </html>
