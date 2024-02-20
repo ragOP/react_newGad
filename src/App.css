@@ -1,0 +1,43 @@
+/* App.css */
+body {
+  overflow: hidden;
+}
+.App {
+  /* Add your common styles here */
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./bg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* overflow: auto;  */
+}
+
+@media (max-width: 768px) {
+  .App {
+    /* Styles for screens smaller than 768px */
+    /* For example, you can adjust the background-size or other properties */
+  }
+}
+
+@media (max-width: 576px) {
+  .App {
+    /* Styles for screens smaller than 576px */
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh; /* Set height of container to full viewport height */
+}
+
+.logo {
+  /* Your image styles */
+}
+
+.s1-Box{
+  border-radius: 20px;
+  padding:5px 15px;
+  color: azure;
+}
