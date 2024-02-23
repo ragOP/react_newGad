@@ -43,7 +43,7 @@ const startTimer = (duration) => {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         document.getElementById("test-timer").innerHTML =
-            `Thank you Patriot!<br /> Your <span style="color:red">FREE</span> Limited Edition Trump 2024 Flag and Gold Coin has been reserved for<br /><span style="color:red">${minutes}:${seconds}</span> minutes`;
+            `Thank you Patriot!<br /> Your <span style="color:red">FREE</span> Limited Edition Trump 2024 Flag and Gold Coin have been reserved for<br /><span style="color:red">${minutes}:${seconds}</span> minutes`;
 
         if (--timer < 0) {
             timer = duration;

@@ -5,7 +5,7 @@
     <meta name="title" content="Quiz 1" />
 
     <!-- <script src="js/jquery-1.12.4.min.js" crossorigin="anonymous"></script> -->
-    
+
     <meta property="og:title" content="Quiz 1" />
     <meta property="og:description" content="" />
     <link
@@ -25,17 +25,30 @@
     />
     <link defer="" rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WLW26M6D');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WLW26M6D");
+    </script>
     <!-- End Google Tag Manager -->
   </head>
 
   <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLW26M6D"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WLW26M6D"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <script src="main.js"></script>
     <div
       class="sec1"
@@ -69,7 +82,7 @@
                 >
                   Thank you Patriot!<br />
                   Your <span style="color: red">FREE</span> Limited Edition
-                  Trump 2024 Flag and Gold Coin has been reserved for<br />
+                  Trump 2024 Flag and Gold Coin have been reserved for<br />
                   <span style="color: red">10:00</span> minutes
                 </h1>
 
@@ -92,6 +105,12 @@
                   </div>
                   <!-- end q1 -->
                 </div>
+                <p>
+                  Warning: Due to extremely high demand, your Trump 2024 Flag
+                  and Gold Coin are reserved for next 10 minutes only. If you
+                  fail to claim yours within time, it will be passed to the next
+                  poll participant.
+                </p>
                 <!-- end survey -->
               </div>
             </div>
@@ -99,7 +118,7 @@
 
           <div class="quiz-Box step1" style="display: none">
             <h1 style="font-weight: bold; font-family: Arial" class="titledual">
-            1 Do you want to make America Great Again?
+              1 Do you want to make America Great Again?
             </h1>
 
             <div class="row buttonContainer">
@@ -174,21 +193,18 @@
 
           <div class="quiz-Box step6" style="display: none">
             <div class="row buttonContainer">
-              <h3
-                style="font-weight: bold; font-family: Arial"
-                class="titledual"
+              <h5
+              
+              
               >
                 Our Limited Edition Trump 2024 Flag and Gold Coin is only meant
                 for true patriots.
-              </h3>
-              <h1>
+            </h5>
+              <h1   style="font-weight: bold; font-family: Arial">
                 3 Do you promise to support Donald Trump in 2024 if we pay for
                 these gifts?
               </h1>
-              <div
-                class="col-6"
-                onclick="helloworld();"
-              >
+              <div class="col-6" onclick="helloworld();">
                 <div class="image-border">
                   <div style="margin-top: 30px; margin-bottom: 30px">
                     <div
@@ -219,7 +235,9 @@
           <div class="quiz-Box step0" style="">
             <h1 id="main-title" style="font-family: Arial; font-weight: bold">
               Take our short poll to receive a
-              <span style="color: red">FREE Trump 2024 Flag and Gold Coin.</span>
+              <span style="color: red"
+                >FREE Trump 2024 Flag and Gold Coin.</span
+              >
               <br />
             </h1>
             <h3 style="color: red; font-size: 18px">
@@ -236,11 +254,7 @@
               <div class="survey hide-desktop">
                 <div class="question" id="q65">
                   <p style="margin-top: 20px">
-                    <a
-                      class="cta_btn"
-                      onclick="startPoll()"
-                      >START THE POLL</a
-                    >
+                    <a class="cta_btn" onclick="startPoll()">START THE POLL</a>
                   </p>
                 </div>
                 <!-- end q1 -->
@@ -291,9 +305,7 @@
                 <div class="survey">
                   <div class="question" id="q1">
                     <p style="margin-top: 20px">
-                      <a
-                        class="cta_btn"
-                        onclick="startPoll()"
+                      <a class="cta_btn" onclick="startPoll()"
                         >START THE POLL</a
                       >
                     </p>
@@ -317,7 +329,7 @@
               }
 
               function startPoll() {
-                hideAndShow('.step0', '.step1');
+                hideAndShow(".step0", ".step1");
               }
 
               var countingItem = document.getElementById("countingItem");
@@ -382,5 +394,4 @@
       </div>
     </div>
   </body>
-
 </html>
